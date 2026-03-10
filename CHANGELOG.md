@@ -226,3 +226,26 @@ Este proyecto está bajo la Licencia MIT. Ver [LICENSE](LICENSE) para detalles.
 - Docker: Ya instalado, no requiere acción
 - Red: openclaw-net existe desde 2026-03-10 12:24
 - Dominio: Usando Tailscale DNS por ahora
+
+## [2026-03-10b] - Sprint 0: LiveKit Self-Hosted ✅
+
+### ✅ Completado
+- 0.2.1 - LiveKit Server configurado (Docker)
+- 0.2.2 - API keys generadas (openclaw-*)
+- 0.2.3 - livekit-server.yaml configurado
+
+### 🔧 Detalles Técnicos
+- LiveKit Server: v1.9.12
+- Redis: 7-alpine
+- Puertos: 7880 (HTTP), 7881 (RTC TCP), 7882 (RTC UDP)
+- Red: openclaw-net (172.20.0.0/16)
+- Ubicación: /opt/livekit/
+
+### 📊 Progreso
+- Sprint 0: 7/10 hitos completados (70%)
+- Total: 7/127 TODOs completados (5%)
+
+### 🎯 Próximos pasos
+- ⏳ 0.3.1 - Leer LiveKit docs
+- ⏳ 0.3.2 - Estudiar Agents Framework
+- ⏳ 0.3.3 - Revisar SIP integration guide

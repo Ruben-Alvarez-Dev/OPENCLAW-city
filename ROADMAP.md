@@ -77,7 +77,7 @@
 | Hito | Estado | Progreso |
 |------|--------|----------|
 | 0.1 Infrastructure Setup | ✅ Completado | 100% |
-| 0.2 LiveKit Account | ⏳ Pendiente | 0% |
+| 0.2 LiveKit Self-Hosted | ✅ Completado | 100% |
 | 0.3 Documentación | ⏳ Pendiente | 0% |
 
 **Checklist Sprint 0:**

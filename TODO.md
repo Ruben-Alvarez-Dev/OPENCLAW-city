@@ -19,10 +19,10 @@ INFRASTRUCTURE SETUP
 [x] 0.1.3 - Configurar red Docker ✅ (openclaw-network)
 [x] 0.1.4 - Preparar dominios/subdominios ✅ (livekit, api, agents)
 
-LIVEKIT ACCOUNT
-[ ] 0.2.1 - Crear cuenta en LiveKit Cloud
-[ ] 0.2.2 - Obtener API keys y guardar
-[ ] 0.2.3 - Configurar proyecto LiveKit (región, límites, SIP)
+LIVEKIT SELF-HOSTED SETUP
+[x] 0.2.1 - Configurar LiveKit server (Docker) ✅
+[x] 0.2.2 - Generar API keys locales ✅
+[x] 0.2.3 - Configurar livekit-server.yaml ✅
 
 DOCUMENTACIÓN
 [ ] 0.3.1 - Leer LiveKit docs completas
@@ -321,7 +321,7 @@ DASHBOARD UNIFICADO
 
 | Sprint | TODOs | Completados | Progreso |
 |--------|-------|-------------|----------|
-| Sprint 0 | 10 | 4 | 40% |
+| Sprint 0 | 10 | 7 | 70% |
 | Sprint 1 | 11 | 0 | 0% |
 | Sprint 2 | 11 | 0 | 0% |
 | Sprint 3 | 17 | 0 | 0% |
@@ -331,7 +331,7 @@ DASHBOARD UNIFICADO
 | Sprint 7 | 13 | 0 | 0% |
 | Sprint 8 | 13 | 0 | 0% |
 | Sprint 9 | 13 | 0 | 0% |
-| **TOTAL** | **127** | **4** | **3%** |
+| **TOTAL** | **127** | **7** | **5%** |
 
 ---
 
@@ -341,7 +341,7 @@ DASHBOARD UNIFICADO
 2. `[x] 0.1.2 - Instalar Docker + Docker Compose ✅`
 3. `[x] 0.1.3 - Configurar red Docker ✅`
 4. `[x] 0.1.4 - Preparar dominios/subdominios ✅`
-5. `[ ] 0.2.1 - Crear cuenta en LiveKit Cloud`
+5. `[x] 0.2.1 - Configurar LiveKit server (Docker) ✅`
 
 ---
 
