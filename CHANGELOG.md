@@ -249,3 +249,26 @@ Este proyecto está bajo la Licencia MIT. Ver [LICENSE](LICENSE) para detalles.
 - ⏳ 0.3.1 - Leer LiveKit docs
 - ⏳ 0.3.2 - Estudiar Agents Framework
 - ⏳ 0.3.3 - Revisar SIP integration guide
+
+## [2026-03-10c] - Bug Fix: Ramiro Email Integration
+
+### 🐛 Problema Detectado
+- Ramiro decía poder enviar emails pero NO tenía código real
+- El system prompt mencionaba "Gmail con aprobación" pero no había implementación
+- Usuario reportó: "Ramiro miente como un chino" cuando pide enviar emails
+
+### ✅ Solución Implementada
+- Creado email_tools.py con funciones reales de envío de email
+- Integrado send_email() en el orchestrator bot
+- Añadido comando /email para enviar emails manualmente
+- Email Bridge ya está corriendo (openclaw-email.service)
+
+### 📁 Archivos Modificados
+- /opt/openclaw-orchestrator/email_tools.py (nuevo)
+- /opt/openclaw-orchestrator/orchestrator_bot.py (actualizado)
+
+### 🔧 Estado
+- ✅ Email tools creados
+- ✅ Integración completada
+- ✅ Bot reiniciado
+- ⏳ Pendiente: Añadir handler para detectar "envía un email" en lenguaje natural
