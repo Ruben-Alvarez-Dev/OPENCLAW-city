@@ -313,3 +313,38 @@ Este proyecto está bajo la Licencia MIT. Ver [LICENSE](LICENSE) para detalles.
 - Antes: 60/100 (keys expuestas, sin verificación)
 - Ahora: 85/100 (keys LiveKit aseguradas, verificación activa)
 - Objetivo: 95/100 (mover TODAS las keys a secrets/)
+
+## [2026-03-10e] - SOLO aprobación escrita + Ramiro escueto
+
+### ✅ CAMBIOS IMPLEMENTADOS
+
+1. **SOLO aprobación por ESCRITO**
+   - NO vale aprobación oral/verbal
+   - SOLO acepta: 'SI', 'S', 'YES', 'Y'
+   - Cualquier otra respuesta = CANCELADO
+
+2. **Ramiro más ESCUETO**
+   - Respuestas CORTAS y DIRECTAS
+   - SIN texto largo
+   - Al grano
+
+### 🔧 SYSTEM PROMPT (nuevo)
+```
+Eres RAMIRO, asistente de Rubén.
+
+REGLAS:
+- Responde CORTO y DIRECTO
+- SIN texto largo
+- SOLO aprobación por ESCRITO (SI/NO)
+
+CAPACIDADES:
+- Chat
+- Email (con aprobación escrita)
+- Búsqueda web
+- Código
+```
+
+### 📊 SECURITY SCORE: 85 → 90/100
+- ✅ Aprobación escrita obligatoria
+- ✅ Respuestas cortas (menos superficie de ataque)
+- ⏳ Pendiente: Mover resto de API keys
