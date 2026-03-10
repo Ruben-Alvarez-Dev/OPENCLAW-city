@@ -1,0 +1,86 @@
+{
+  "gateway": {
+    "mode": "local",
+    "bind": "loopback",
+    "port": 18789,
+    "auth": {
+      "mode": "token",
+      "token": "${OPENCLAW_GATEWAY_TOKEN}"
+    }
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "tools": {
+    "profile": "messaging",
+    "deny": [
+      "group:automation",
+      "group:runtime",
+      "group:fs",
+      "sessions_spawn",
+      "sessions_send"
+    ],
+    "fs": {
+      "workspaceOnly": true
+    },
+    "exec": {
+      "security": "deny",
+      "ask": "always"
+    },
+    "elevated": {
+      "enabled": false
+    }
+  },
+  "browser": {
+    "ssrfPolicy": {
+      "dangerouslyAllowPrivateNetwork": false,
+      "hostnameAllowlist": [
+        "*.google.com",
+        "*.googleapis.com",
+        "*.mistral.ai"
+      ]
+    }
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "botToken": "${OPENCLAW_TELEGRAM_BOT_TOKEN}",
+      "dmPolicy": "allowlist",
+      "allowFrom": ["<CHAT_ID_AQUI>"],
+      "groupPolicy": "disabled"
+    }
+  },
+  "models": {
+    "providers": {
+      "mistral": {
+        "baseUrl": "${OPENCLAW_MISTRAL_BASE_URL}",
+        "api": "openai-responses",
+        "apiKey": "${OPENCLAW_MISTRAL_API_KEY}",
+        "models": [
+          {
+            "id": "mistral-large-latest",
+            "name": "Mistral Large",
+            "reasoning": true,
+            "input": ["text"],
+            "contextWindow": 128000,
+            "maxTokens": 4096
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": "mistral/mistral-large-latest",
+      "sandbox": {
+        "mode": "non-main",
+        "workspaceAccess": "none"
+      }
+    }
+  },
+  "discovery": {
+    "mdns": {
+      "mode": "off"
+    }
+  }
+}

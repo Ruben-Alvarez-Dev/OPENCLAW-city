@@ -1,0 +1,22 @@
+[Unit]
+Description=OpenClaw Gateway
+Documentation=https://docs.openclaw.ai
+After=network-online.target tailscaled.service docker.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=openclaw
+Group=openclaw
+WorkingDirectory=/home/openclaw
+EnvironmentFile=-/home/openclaw/.openclaw/.env
+ExecStart=/usr/bin/openclaw gateway run --bind loopback --port 18789
+Restart=always
+RestartSec=5
+Environment=NODE_ENV=production
+Environment=NODE_COMPILE_CACHE=/var/tmp/openclaw-compile-cache
+Environment=OPENCLAW_NO_RESPAWN=1
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target

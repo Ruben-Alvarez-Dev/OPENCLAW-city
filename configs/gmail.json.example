@@ -1,0 +1,8 @@
+{
+  "email": "tu.email@gmail.com",
+  "password": "app-password-16-characters",
+  "imap_server": "imap.gmail.com",
+  "imap_port": 993,
+  "smtp_server": "smtp.gmail.com",
+  "smtp_port": 587
+}

@@ -1,0 +1,20 @@
+[Unit]
+Description=OpenClaw Orchestrator Bot (Telegram)
+Documentation=https://docs.openclaw.ai
+After=network-online.target openclaw.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/opt/openclaw-orchestrator
+ExecStart=/opt/openclaw-orchestrator/venv/bin/python3 /opt/openclaw-orchestrator/orchestrator_bot.py
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=openclaw-orchestrator
+
+[Install]
+WantedBy=multi-user.target
